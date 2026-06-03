@@ -179,6 +179,7 @@
         echo "<div class='resultado'>Situação atual: <strong>$mediaFinal</strong></div>";
         echo "</div>";
 
+
         //Exercicio maior e menor:
         echo "<div class='exercicio'>";
         echo "<h3>Qual é o maior?:</h3>";
@@ -188,48 +189,97 @@
         echo "<p>Valor 1: <code>$numero1</code></p>";
         echo "<p>Valor 2: <code>$numero2</code></p>";
         if ($numero1 > $numero2) {
-             $resultado = "Número 1 é o maior.";
+            $resultado = "Número 1 é o maior.";
         } else {
-             $resultado = "Número 2 é o maior.";
+            $resultado = "Número 2 é o maior.";
         }
         echo "<div class='resultado'>Resultado: <strong> $resultado</strong></div>";
         echo "</div>";
 
+
+
         // ----------------------------------------------------
-        // Exercício com: Switch
+        // Exercício Dias da Semana:
         echo "<div class='exercicio'>";
-        echo "<h3>Cor Preferida (Switch)</h3>";
-        $corNum = 2; // 1 = Azul
-        echo "<p>Número da Cor Preferida: <code>$corNum</code></p>";
+        echo "<h3>Dias da Semana</h3>";
+        $dia = 4;
+        echo "<p>Dia da Semana: <code>$dia</code></p>";
         $corNome = "";
-        switch ($corNum) {
+        switch ($dia) {
             case 1:
-                $corNome = "Azul";
+                $dia = "Sábado";
                 break;
             case 2:
-                $corNome = "Verde";
+                $dia = "Domingo";
                 break;
             case 3:
-                $corNome = "Amarelo";
+                $dia = "Segunda-Feira";
                 break;
             case 4:
-                $corNome = "Laranja";
+                $dia = "Terça-Feira";
                 break;
             case 5:
-                $corNome = "Branco";
+                $dia = "Quarta-Feira";
                 break;
             case 6:
-                $corNome = "Preto";
+                $dia = "Quinta-Feira";
                 break;
             case 7:
-                $corNome = "Lilás";
+                $dia = "Sexta-Feira";
                 break;
             default:
-                $corNome = "Cor inválida";
+                $dia = "Dia da Semana inválido";
         }
-        echo "<div class='resultado'>Cor Preferida: <strong>$corNome</strong></div>";
+        echo "<div class='resultado'>Dia Escolhido: <strong>$dia</strong></div>";
         echo "</div>";
 
+
+        //Exercicio vogal ou consoante
+        echo "<div class='exercicio'>";
+        echo "<h3>Vogal ou Consoante:</h3>";
+        $letra = "J";
+        $letraMins = strtolower($letra);
+        echo "<p>Letra escolhida: <code>$letra</code></p>";
+        $tipoLetra = "";
+        switch ($letraMins) {
+            case 'a':
+            case 'e':
+            case 'i':       
+            case 'o':
+            case 'u':
+                $tipoLetra = "A letra selecionada é vogal";
+                break;
+            default:
+                $tipoLetra = "A letra selecionada é consoante";
+        }
+        echo "<div class='resultado'>Tipo da letra escolhida: <strong>$tipoLetra</strong></div>";
+        echo "</div>";
+
+
+        // Exercício status de pedido:
+        echo "<div class='exercicio'>";
+        echo "<h3>Status do pedido</h3>";
+        $status = "Enviado";
+        echo "<p>Status atual: <code>$status</code></p>";
+        $mensagem = "";
+        switch ($status) {
+            case 'Aguardando':
+               $mensagem = "Olá, seu pedido ainda está em análise!";
+                break;
+            case 'Em preparação':
+               $mensagem = "Olá de novo, seu pedido já está sendo preparado para envio.";
+                break;
+            case 'Enviado':
+                $mensagem = "Olá! seu pedido já foi feito e está a caminho.";
+                break;
+            case 'Concluido':
+              $mensagem = "Pedido entregue com sucesso.";
+                break;
+            default:
+                $mensagem = "Dia da Semana inválido";
+        }
+        echo "<div class='resultado'>Status atual do pedido: <strong>$mensagem</strong></div>";
+        echo "</div>";
 
 
         // ----------------------------------------------------
