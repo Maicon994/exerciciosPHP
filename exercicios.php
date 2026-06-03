@@ -120,6 +120,8 @@
         echo "<div class='resultado'>A média de todas as notas é: <strong>$convert</strong></div>";
         echo "</div>";
 
+
+
         //Exercício area do triangulo
         echo "<div class='exercicio'>";
         echo "<h3>Área do triângulo:</h3>";
@@ -130,6 +132,8 @@
         $area = number_format(($base * $altura) / 2, 2);
         echo "<div class='resultado'>O valor da área é: <strong>$area</strong></div>";
         echo "</div>";
+
+
 
         //Exercicios if else
         echo "<div class='exercicio'>";
@@ -162,7 +166,35 @@
         echo "</div>";
 
 
-        
+        // Exercício Média 2:
+        echo "<div class='exercicio'>";
+        echo "<h3>Média das notas 2:</h3>";
+        $mediaFinal = 6.5;
+        echo "<p>Sua Média Final: <code>$mediaFinal</code></p>";
+        if ($mediaFinal >= 6) {
+            $mediaFinal = "Está aprovado.";
+        } else {
+            $mediaFinal = "Está reprovado.";
+        }
+        echo "<div class='resultado'>Situação atual: <strong>$mediaFinal</strong></div>";
+        echo "</div>";
+
+        //Exercicio maior e menor:
+        echo "<div class='exercicio'>";
+        echo "<h3>Qual é o maior?:</h3>";
+        $numero1 = 5;
+        $numero2 = 20;
+        $resultado = "";
+        echo "<p>Valor 1: <code>$numero1</code></p>";
+        echo "<p>Valor 2: <code>$numero2</code></p>";
+        if ($numero1 > $numero2) {
+             $resultado = "Número 1 é o maior.";
+        } else {
+             $resultado = "Número 2 é o maior.";
+        }
+        echo "<div class='resultado'>Resultado: <strong> $resultado</strong></div>";
+        echo "</div>";
+
         // ----------------------------------------------------
         // Exercício com: Switch
         echo "<div class='exercicio'>";
