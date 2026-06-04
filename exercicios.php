@@ -392,9 +392,25 @@
         echo "Os números do array são: " . implode(", ", $valores) . "<br>";
         echo "A soma total desses números é: <strong>$totalSom</strong>";
 
-        //Associativo aluno
-        
+        echo "</div>";
+        echo "</div>";
 
+        //Associativo aluno
+        echo "<div class='exercicio'>";
+        echo "<h3>Associativo Aluno</h3>";
+        echo "<div class='resultado'>";
+        $aluno = [
+            "nome" => "Axl Rose",
+            "idade" => 24,
+            "curso" => "Análise e Desenvolvimento de Sistemas"
+        ];
+
+        echo "Nome: <strong>" . $aluno['nome'] . "</strong><br>";
+        echo "Idade: <strong>" . $aluno['idade'] . " anos</strong><br>";
+        echo "Curso: <strong>" . $aluno['curso'] . "</strong><br>";
+
+        echo "</div>";
+        echo "</div>";
 
         // Fim do bloco PHP
         ?>
