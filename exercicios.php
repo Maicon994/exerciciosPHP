@@ -325,6 +325,7 @@
 
         //Exercicios While
         
+        //Atividade Contagem Regressiva
         echo "<div class='exercicio'>";
         echo "<h3>Contagem Regressiva</h3>";
         echo "<div class='resultado'>";
@@ -339,7 +340,62 @@
         echo "</div>";
         echo "</div>";
 
+        //Atividades Do While
         
+        //atividade Sorteio Simples
+        echo "<div class='exercicio'>";
+        echo "<h3>Sorteio Simples</h3>";
+        echo "<div class='resultado'>";
+
+        $numSorteado = 0;
+        $tentativaCont = 0;
+
+        do {
+            $numSorteado = rand(1, 10);
+            $tentativaCont++;
+
+            echo "Sorteado: $numSorteado <br>";
+        } while ($numSorteado != 5);
+
+        echo "<br>O número 5 foi sorteado! Total de tentativas necessárias: <strong>$tentativaCont</strong>";
+
+        echo "</div>";
+        echo "</div>";
+
+        //Atividades Array
+        echo "<div class='exercicio'>";
+        echo "<h3>Lista de Frutas</h3>";
+        echo "<div class='resultado'>";
+        $fruta = ["maça", "pera", "abacaxi", "banana", "limão"];
+
+        echo "<p>Lista de Frutas:</p>";
+        echo "<ul>";
+        foreach ($fruta as $umaFruta) {
+            echo "<li>$umaFruta</li>";
+        }
+        echo "</ul>";
+
+        echo "</div>";
+        echo "</div>";
+
+        //Calculo de numeros
+        echo "<div class='exercicio'>";
+        echo "<h3>Calculo e números:</h3>";
+        echo "<div class='resultado'>";
+        $valores = [1, 22, 10, 2, 15];
+        $totalSom = 0;
+
+        echo "<p>Soma dos valores:</p>";
+        foreach ($valores as $valorUni) {
+            $totalSom += $valorUni;
+        }
+        echo "Os números do array são: " . implode(", ", $valores) . "<br>";
+        echo "A soma total desses números é: <strong>$totalSom</strong>";
+
+        //Associativo aluno
+        
+
+
         // Fim do bloco PHP
         ?>
     </div>
