@@ -244,7 +244,7 @@
         switch ($letraMins) {
             case 'a':
             case 'e':
-            case 'i':       
+            case 'i':
             case 'o':
             case 'u':
                 $tipoLetra = "A letra selecionada é vogal";
@@ -264,16 +264,16 @@
         $mensagem = "";
         switch ($status) {
             case 'Aguardando':
-               $mensagem = "Olá, seu pedido ainda está em análise!";
+                $mensagem = "Olá, seu pedido ainda está em análise!";
                 break;
             case 'Em preparação':
-               $mensagem = "Olá de novo, seu pedido já está sendo preparado para envio.";
+                $mensagem = "Olá de novo, seu pedido já está sendo preparado para envio.";
                 break;
             case 'Enviado':
                 $mensagem = "Olá! seu pedido já foi feito e está a caminho.";
                 break;
             case 'Concluido':
-              $mensagem = "Pedido entregue com sucesso.";
+                $mensagem = "Pedido entregue com sucesso.";
                 break;
             default:
                 $mensagem = "Dia da Semana inválido";
@@ -283,9 +283,23 @@
 
 
         // ----------------------------------------------------
-        // Lista dos pares entre 0 e 10 (For)
+        //Atividades For
+        
+
+        //Contagem 1-10
         echo "<div class='exercicio'>";
-        echo "<h3>Lista de pares entre 0 e 10(For)</h3>";
+        echo "<h3>Contagem de 1 a 10</h3>";
+        echo "<div class='resultado'>";
+        for ($i = 0; $i <= 10; $i++) {
+            echo "<strong>$i</strong> ";
+        }
+        echo "</div>";
+        echo "</div>";
+
+
+        // Lista dos pares 
+        echo "<div class='exercicio'>";
+        echo "<h3>Lista de pares entre 0 e 10</h3>";
         echo "<div class='resultado'>";
         for ($i = 0; $i <= 10; $i += 2) {
             echo "<strong>$i</strong> ";
@@ -293,7 +307,39 @@
         echo "</div>";
         echo "</div>";
 
+        //Tabuada
+        echo "<div class='exercicio'>";
+        echo "<h3>Tabuada</h3>";
+        $numEscolhido = 5;
+        echo "<p>Tabuada do número: <code>$numEscolhido</code> (número escolhido)</p>";
+        echo "<div class='resultado'>";
 
+        for ($i = 1; $i <= 10; $i++) {
+            $resultadoTab = $numEscolhido * $i;
+            echo "$numEscolhido x $i = <strong>$resultadoTab</strong><br>";
+        }
+        echo "</div>";
+        echo "</div>";
+
+
+
+        //Exercicios While
+        
+        echo "<div class='exercicio'>";
+        echo "<h3>Contagem Regressiva</h3>";
+        echo "<div class='resultado'>";
+
+        $cont = 10;
+
+        while ($cont >= 1) {
+            echo "<strong>$cont</strong> ";
+
+            $cont--;
+        }
+        echo "</div>";
+        echo "</div>";
+
+        
         // Fim do bloco PHP
         ?>
     </div>
